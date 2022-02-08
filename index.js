@@ -31,7 +31,7 @@ tomorrow.append(last); // 해당 노드의 젤 마지막 자식노드로 추가
 
 const prev = document.createElement('p');
 prev.textContent = '이전';
-tomorrow.before(prev);// 해당 노드의 앞에 형제 노드를 추가
+tomorrow.before('문자열');// 해당 노드의 앞에 형제 노드를 추가
 
 const next = document.createElement('p');
 next.textContent = '다음';
