@@ -1,10 +1,5 @@
 // Dom (Document Object Model) 문서 객체 모델
-// 브라우저에 나타낸 요소들을 모두 객체로 표현함을 이야기함
-// 브라우저의 최상당 객체는 document
-// document 객체를 이용해 화면의 모든요소를 핸들링할수 있다.
+const title = document.querySelector('#title') // title 아이디를 가진 태그를 가져오라
 
-console.log(document);
-console.log("document 의 자료형 : ",typeof document);
-console.log("document의 객체로 출력하기");
-console.dir(document)
-
+// 브라우저 띄우고 title 변수가 담고있는 id 가 title 인 객체에 접근가능
+// 브라우저 콘솔창에 title.style.color = 'red' 실습 해보기
