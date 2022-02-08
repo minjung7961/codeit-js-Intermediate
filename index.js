@@ -5,6 +5,9 @@ const tomorrow = document.querySelector('#tomorrow');
 
 // 노드  이동하기: prepend, append, before, after
 
-// 오늘 할일의 맨뒤에 내일할일의 뮤지컬 공연 예매를 추가해보자
-today.append(tomorrow.children[1]); // 이동!
-console.log(document);
+  // 오늘 할 일의 고양이 화장실 청소를 내일할일의 뮤지컬 공연 예매 다음으로 옮겨보자
+
+console.log(tomorrow.children[1]);
+tomorrow.children[1].after(today.children[1]);
+tomorrow.children[2].before(today.children[1]);
+tomorrow.lastElementChild.before(today.children[1]);
