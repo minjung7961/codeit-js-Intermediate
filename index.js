@@ -34,7 +34,7 @@ console.log(myTag.outerHTML);// 해당 요소를 포함하는 모든 html코드�
       <li>Russian Blue</li>
     </ul> */}
 
-myTag.outerHTML = "<ul id='new-list'><li>Exotic</li></ul>";
+// myTag.outerHTML = "<ul id='new-list'><li>Exotic</li></ul>";
 
 console.log(myTag.outerHTML);
 
@@ -51,19 +51,22 @@ console.log(myTag.outerHTML);
           <li>Russian Blue</li>
         </ul> */}
 
-// console.log(myTag.textContent);
+console.log(myTag.textContent);
 
-//     // 출력값은 아래와 같다 ㅇㅅㅇ 말그대로 텍스트 값만 출력한다.
-//     /*
-//       Ragdoll
-//       British Shorthair
-//       Scottish Fold
-//       Bengal
-//       Siamese
-//       Maine Coon
-//       American Shorthair
-//       Russian Blue
-//     */
+    // 출력값은 아래와 같다 ㅇㅅㅇ 말그대로 텍스트 값만 출력한다.
+    /*
+      Ragdoll
+      British Shorthair
+      Scottish Fold
+      Bengal
+      Siamese
+      Maine Coon
+      American Shorthair
+      Russian Blue
+    */
 
-// myTag.textContent = '<>new text!</>'
-// console.log(myTag.textContent);
+myTag.textContent = '<>new text!</>'
+console.log(myTag.textContent); // 브라우저에 택스트 그대로 출력함
+
+// 출력값은 아래와 같다.
+// <>new text!</>
