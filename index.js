@@ -1,26 +1,21 @@
-// Don 트리 여행하기
+// 요소 노드 주요 프로퍼티
 const myTag = document.querySelector('#list-1');
 
-// 부모 요소 노드 접근 방법
-console.log('부모 요소 접근방법');
-console.log(myTag.parentElement);
+// innerHTML
+console.log(myTag.innerHTML);// 요소 안에있는 html 자체를 문자열로 나타낸다. 주의할점은 안에 들여쓰기라던지 줄바꿈문자도 모두 포함된다는것이다.
 
-// 형제 요소 노드 접근 방법
-console.log('형제 요소 접근방법');
-console.log(myTag.previousElementSibling);
-console.log(myTag.nextElementSibling);
+{/*  출력결과를 보아 들여쓰기 줄바꿈 모두 포함하여 콘솔에다가 출력함을 알수있다.
+<li>Ragdoll</li>
+<li>British Shorthair</li>
+<li>Scottish Fold</li>
+<li>Bengal</li>
+<li>Siamese</li>
+<li>Maine Coon</li>
+<li>American Shorthair</li>
+<li>Russian Blue</li> 
+*/}
 
-// 자식 요소 노드 접근 방법
-console.log('자식 요소 접근방법');
-console.log(myTag.children); // html 컬렉션 형태로 자식 노드들 출력
-console.log(myTag.children[0]);
-console.log(myTag.children[1]);
-console.log(myTag.children[2]);
-console.log(myTag.children[3]);
-console.log(myTag.children['list-1']);
-console.log('첫번째 마지막 요소 접근방법');
-console.log(myTag.firstElementChild);
-console.log(myTag.lastElementChild);
+// 사실 innerHTML 을 값을 수정할때 좀더 많이 쓴다.
 
-//  접근 연결해서도 가능
-console.log(myTag.parentElement.nextElementSibling);
+myTag.innerHTML += '  <li>Exotic</li>'; // 수정된다.
+console.log(myTag.innerHTML);
