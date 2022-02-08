@@ -1,72 +1,13 @@
-// 요소 노드 주요 프로퍼티
-const myTag = document.querySelector('#list-1');
 
+const today = document.querySelector('#today');
+console.log(today.outerHTML);
 
-// innerHTML
-console.log(myTag.innerHTML);
+today.innerHTML = '<li>처음</li>' + today.innerHTML;
+today.innerHTML = today.innerHTML + '<li>마지막</li>';
 
-    // 출력값은 아래와 같다.
-/*
-    <li>Ragdoll</li>
-    <li>British Shorthair</li>
-    <li>Scottish Fold</li>
-    <li>Bengal</li>
-    <li>Siamese</li>
-    <li>Maine Coon</li>
-    <li>American Shorthair</li>
-    <li>Russian Blue</li>
-*/
+today.outerHTML = '<p>이전</p>' + today.outerHTML; // 완전히 새로운 요소가 되버려서 새로 또 아래와 같이 태그를 찾아야함
+console.log(today.outerHTML);
+console.log(document);
 
-
-// outerHTML
-console.log(myTag.outerHTML);// 해당 요소를 포함하는 모든 html코드를 보여준다
-
-    // 출력값은 아래와 같다
-{
-  /* <ul id="list-1">
-      <li>Ragdoll</li>
-      <li>British Shorthair</li>
-      <li>Scottish Fold</li>
-      <li>Bengal</li>
-      <li>Siamese</li>
-      <li>Maine Coon</li>
-      <li>American Shorthair</li>
-      <li>Russian Blue</li>
-    </ul> */}
-
-// myTag.outerHTML = "<ul id='new-list'><li>Exotic</li></ul>";
-
-console.log(myTag.outerHTML);
-
-    // 출력값은 아래와 같다 ㅇㅅㅇ
-    {
-      /* <ul id="list-1">
-          <li>Ragdoll</li>
-          <li>British Shorthair</li>
-          <li>Scottish Fold</li>
-          <li>Bengal</li>
-          <li>Siamese</li>
-          <li>Maine Coon</li>
-          <li>American Shorthair</li>
-          <li>Russian Blue</li>
-        </ul> */}
-
-console.log(myTag.textContent);
-
-    // 출력값은 아래와 같다 ㅇㅅㅇ 말그대로 텍스트 값만 출력한다.
-    /*
-      Ragdoll
-      British Shorthair
-      Scottish Fold
-      Bengal
-      Siamese
-      Maine Coon
-      American Shorthair
-      Russian Blue
-    */
-
-myTag.textContent = '<>new text!</>'
-console.log(myTag.textContent); // 브라우저에 택스트 그대로 출력함
-
-// 출력값은 아래와 같다.
-// <>new text!</>
+const today2 = document.querySelector('#today');
+today2.outerHTML =  today2.outerHTML + '<p>다음</p>';
