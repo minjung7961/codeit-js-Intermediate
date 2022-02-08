@@ -12,7 +12,7 @@ console.log(document);
 const today2 = document.querySelector('#today'); // 바뀌어버렸기 때문에 새로 요소를 찾아야함 (이 말인 즉슨 실수를 자주 유발하게 된다.)
 today2.outerHTML =  today2.outerHTML + '<p>다음</p>';
 
-// 요소 노드 추가하기
-const tomorrow = document.querySelector('#tomorrow');
+// // 요소 노드 추가하기
+// const tomorrow = document.querySelector('#tomorrow');
 
-// 1. 요소 노드 만들기 : document
+// // 1. 요소 노드 만들기 : document
