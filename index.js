@@ -9,3 +9,8 @@ const link = item.firstElementChild;
 console.log(tomorrow.getAttribute('href')); // 비표준이지만 핸들링 가능 bb
 console.log(item.getAttribute('class')); // 이름 살짝 바뀜 유의 22
 
+// 요소 노드의 속성 추가하는 방법
+
+// // elem.setAttribute('속성', '값'); 속성 추가(수정)하기
+tomorrow.setAttribute('class','list'); // 추가
+link.setAttribute('href',"htpps://www.codeit.kr")// 수정
