@@ -1,13 +1,17 @@
-
-// 노드 삭제와 이동
-const today = document.querySelector('#today');
+// HTML 속성 (HTML attribute)
 const tomorrow = document.querySelector('#tomorrow');
+const item = tomorrow.firstElementChild;
+const link = item.firstElementChild;
 
-// 노드  이동하기: prepend, append, before, after
+// id 속성
+console.log(tomorrow);
+console.log(tomorrow.id);
 
-  // 오늘 할 일의 고양이 화장실 청소를 내일할일의 뮤지컬 공연 예매 다음으로 옮겨보자
+//class 속성
+console.log(item);
+console.log(item.className);
 
-console.log(tomorrow.children[1]);
-tomorrow.children[1].after(today.children[1]);
-tomorrow.children[2].before(today.children[1]);
-tomorrow.lastElementChild.before(today.children[1]);
+// href 속성
+console.log(link);
+console.log(link.href);
+console.log(tomorrow.href); // undefine : html 표준이아니기때문
