@@ -9,7 +9,7 @@ console.log(tomorrow.id);
 
 //class 속성
 console.log(item);
-console.log(item.className);
+console.log(item.className); // 이름 살짝 바뀜 유의
 
 // href 속성
 console.log(link);
