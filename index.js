@@ -4,16 +4,12 @@ const tomorrow = document.querySelector('#tomorrow');
 
 // 따라서 해당 요소의 프로퍼티를 변경하기보단 클래스를 선택해 변경하는것을 권장함
 
-//  // elem.classList: method -> add, remove, toggle
+//  // elem.classList: method -> toggle -> classList 있으면 삭제하고 없으면 추가하기
 const item = tomorrow.children[1];
-item.classList.add('done'); // -> 클래스 리스트 하나 추가
-item.classList.add('other', '민쭁이'); // -> 클래스 리스트 2개 추가
-item.classList.add('other', '민쭁이', 'ㅇㅇ'); // -> 중복해서 넣을시 뭇함 유의하기!
+item.classList.toggle('done'); // 추가되고 (여러개 x)
+item.classList.toggle('item'); // 삭제되었다 (여러개 x)
 
-//  // elem.classList -> remove
-item.classList.remove('done'); // -> 클래스 리스트 하나 삭제
-item.classList.remove('other', '민쭁이'); // -> 클래스 리스트 두개 삭제
-item.classList.remove('영인이'); // -> 없는거 삭제하라시키면 그냥 무시...
+//  //  // toggle 의 두번째 인자 True 일떄 : add 기능만, False 일떄 : remove 기능만
 
 //  // elem.chlassName:
 // today.children[1].className = 'done';
