@@ -10,6 +10,11 @@ item.classList.add('done'); // -> 클래스 리스트 하나 추가
 item.classList.add('other', '민쭁이'); // -> 클래스 리스트 2개 추가
 item.classList.add('other', '민쭁이', 'ㅇㅇ'); // -> 중복해서 넣을시 뭇함 유의하기!
 
+//  // elem.classList -> remove
+item.classList.remove('done'); // -> 클래스 리스트 하나 삭제
+item.classList.remove('other', '민쭁이'); // -> 클래스 리스트 두개 삭제
+item.classList.remove('영인이'); // -> 없는거 삭제하라시키면 그냥 무시...
+
 //  // elem.chlassName:
 // today.children[1].className = 'done';
 
