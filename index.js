@@ -4,16 +4,15 @@ const tomorrow = document.querySelector('#tomorrow');
 
 // 따라서 해당 요소의 프로퍼티를 변경하기보단 클래스를 선택해 변경하는것을 권장함
 
-//  // elem.classList:
-console.log(today.classList); // -> DOMTokenList(2) ['list', 'today',  value: 'list today']
-console.log(today.children[1].classList); // -> DOMTokenList ['item', value: 'item]
+//  // elem.classList: method -> add, remove, toggle
+const item = tomorrow.children[1];
+item.classList.add('done'); // -> 클래스 리스트 하나 추가
+item.classList.add('other', '민쭁이'); // -> 클래스 리스트 2개 추가
+item.classList.add('other', '민쭁이', 'ㅇㅇ'); // -> 중복해서 넣을시 뭇함 유의하기!
 
-//  // elem.chlassName: add, remove, toggle
-today.children[1].className = 'done';
-console.log(today.children[1]);
+//  // elem.chlassName:
+// today.children[1].className = 'done';
 
-const done = document.getElementsByClassName('done');
-// 기존의 class 이름 item 이 사라지는데 안사라졌음좋겠다? -> classList를 사용하쟈
 console.log(document)
 
 // style 프로퍼티
