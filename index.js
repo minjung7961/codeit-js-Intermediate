@@ -10,5 +10,9 @@ function event2(){
   console.log("Hi again!");
 };
 
+// 1. addEventlistener(event, handler);
 btn.addEventListener('click',event1);
 btn.addEventListener('click',event2);
+
+// 2. elem.removeEventListener(event, handler)
+btn.removeEventListener('click', event2)
