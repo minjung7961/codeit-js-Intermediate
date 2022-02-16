@@ -19,11 +19,12 @@ for (let tag of fields){
 
 const btns = document.querySelectorAll('.btn');
 for (let btn of btns){
-  const status = btn.getAttribute('data-status');
+  // const status = btn.getAttribute('data-status');
+  const status = btn.dataset.status;
   console.log(status)
   btn.onclick = function () {
     fields[2].textContent = status;
-    fields[2],this.setAttribute('status',status)
+    fields[2].dataset.statuse = status
     console.log(document.querySelectorAll('[data-field]')[2]);
     console.log(btn); // html 태그에 onclick 프로퍼티가 추가되는것같지는 않다.
   }
