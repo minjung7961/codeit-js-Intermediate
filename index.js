@@ -14,19 +14,7 @@ function event2(){
 btn.addEventListener('click',event1);
 btn.addEventListener('click',event2);
 
-// 2. elem.removeEventListener(event, handler)
-btn.removeEventListener('click', event2)
-
-// removeEventListener 사용시 주의할 점
-// 1. 등록했던 함수의 이름과 반드시 같아야함
-// ex
-
-btn.addEventListener('click', function(){
-  console.log('event3!');
-});
-
-// 제대로 작동안함 이유는 등록했던 바로위의 함수의 이름과 다르기때문(무명 함수...)
-// 무명함수 못지우니 이름명시한 함수형태로 등록하고 지우도록하자!
-btn.removeEventListener("click", function(){
-  console.log('event3!')
-});
+// addEventListener 사용시 주의사항
+btn.addEventListener('click',event1());
+// 두번쨰 인자값에 event1 이 아닌 event1() 을 입력시 이벤트 등록하기전에 브라우저가 event1 함수를 실행시켜 리턴값을
+// addEventListener 에 집어 넣는다 이경우 event1() 에 리턴값이 없기때문에 undefine 이 addEventHandler 두번쨰 인자값으로 입력된다.
