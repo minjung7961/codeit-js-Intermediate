@@ -1,19 +1,28 @@
 // 비표준 속성 활용하는방법
-// 1. 선택자로 활용
+// 3. 스타일이나 데이터 변경에 활용
+
+// getAttribute -> 속성값가져오고, setAttribute 활용해서 속성값을 설정해주는 원리를 이용해 실시간 스타일이나 데이터 변경 가능
+
+// 대로는 class 를 다루는 것보다 setAttribute로 비표준 속성을 변경하는게 편할때도 있다.
+
 const fields = document.querySelectorAll('[field]');
-console.log(fields); // > Nodelist(3)
-
-// 2. 값을 표시할 태그를 구분할 때 활용
-// 각 프로퍼티 값들이 들어갈 태그를 구분하는데 활용할 수도 있다.
-
-// const fields = document.querySelectorAll('[field]');
 const task = {
   title: '코드 에디터 개발',
-  manage: 'CastleRing, Raccon lee',
-  status: 'ㅇㅅㅇ',
+  manager: 'CastleRing, Reccoon lee',
+  status: '',
 };
 
 for (let tag of fields){
   const field = tag.getAttribute('field');
   tag.textContent = task[field];
+}
+
+const btns = document.querySelectorAll('.btn');
+for (let btn of btns){
+  const status = btn.getAttribute('status');
+  btn.onclick = function () {
+    fields[2].textContent = status;
+    fields[2],this.setAttribute('status',status)
+    console.log(document.querySelectorAll('[field]')[2]);
+  }
 }
