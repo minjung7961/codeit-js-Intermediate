@@ -24,7 +24,7 @@ for (let btn of btns){
   console.log(status)
   btn.onclick = function () {
     fields[2].textContent = status;
-    fields[2].dataset.statuse = status
+    fields[2].setAttribute('data-status', status);
     console.log(document.querySelectorAll('[data-field]')[2]);
     console.log(btn); // html 태그에 onclick 프로퍼티가 추가되는것같지는 않다.
   }
