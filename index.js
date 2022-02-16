@@ -2,12 +2,12 @@
 const myInput = document.querySelector('#myInput');
 const myBtn = document.querySelector('#myBtn');
 
-// 키보드 누르면 일어날 이벤트 등록
-myInput.addEventListener('keydown', function(){
-  console.log('KeyboardEvent');
-});
+// 이전 커밋처럼 핸들링 하기 보다는 각 이벤트의 함수에 상세한 설명이 필요하다.
 
-// 왼쪽 마우스 클릭시 일어날 이벤트 등록
-myBtn.addEventListener('click', function (){
-  console.log('MouseEvent');
-});
+// 함수에 이벤트 객체를 파라미터로 전달. 이벤트 객체는 이벤트 발생시 자동으로 만들어진다.
+function printEvent(event){
+  console.log(event);
+}
+
+myInput.addEventListener('keydown', printEvent);
+myBtn.addEventListener('click', printEvent);
