@@ -1,22 +1,11 @@
-// 스타일 다루기
-const today = document.querySelector('#today');
-const tomorrow = document.querySelector('#tomorrow');
+// 이벤트 핸들러 등록하기
+let btn = document.querySelector('#myBtn');
 
-// 따라서 해당 요소의 프로퍼티를 변경하기보단 클래스를 선택해 변경하는것을 권장함
+// 기존 html 의 onclick 프로퍼티에 덮어써서 기능함
+btn.onclick = function () {
+  console.log('Hi Codeit!');
+};
 
-//  // elem.classList: method -> toggle -> classList 있으면 삭제하고 없으면 추가하기
-const item = tomorrow.children[1];
-item.classList.toggle('done'); // 추가되고 (여러개 x)
-item.classList.toggle('item'); // 삭제되었다 (여러개 x)
-
-//  //  // toggle 의 두번째 인자 True 일떄 : add 기능만, False 일떄 : remove 기능만
-
-//  // elem.chlassName:
-// today.children[1].className = 'done';
-
-console.log(document)
-
-// style 프로퍼티
-today.children[0].style.textDecoration = 'line-through';
-today.children[0].style.backgroundColor = '#DDDDDD';
-
+const myContent = document.querySelector('#content');
+myContent.innerHTML = '<div>Hello</div>'; //위의 이벤트 코드위에도 덮어쓰는바람에 hello 만 남음
+myContent.className = 'button';
