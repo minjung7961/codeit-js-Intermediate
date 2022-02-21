@@ -1,29 +1,15 @@
-// 이벤트 버블링 (Event Bubbling)
-const content = document.querySelector('#content');
-const title = document.querySelector('#title');
-const list = document.querySelector('#list');// 아이디값 기준으로 선택할때 이름 #으로 시작
-const items = document.querySelectorAll('.item'); // 클래스기준으로 선택할떄 이름 . 으로 시작 all 메소드사용
+// 이벤트 위임 event Delegation
+const list = document.querySelector('#list');
 
-content.addEventListener('click', function(e){
-  console.log('content Event');
-  console.log(e.currentTarget); 
-});
-
-title.addEventListener('click', function(e){
-  console.log('title Event');
-  console.log(e.currentTarget);
-});
-
-list.addEventListener('click', function(e){
-  console.log('list Event');
-  console.log(e.currentTarget);
-})
-
-for(let item of items){
+// for / of 문 : 객체의 모든 열거할 수 있는 프로퍼티의 개수만큼 반복적으로 실행하고자 하는 실행문;
+for(let item of list.children){
   item.addEventListener('click', function(e){
-    console.log('item Event');
-    console.log(e.currentTarget);
-    // 이벤트 버블링을 멈추는 방법
-    e.stopPropagation(); // 정말 필요한 경우가 아니라면 안쓰는것을 추천한다
+    e.target.classList.toggle('done');
   });
 }
+
+// 만약 객체를 새로 만든다면 추가한 요소에 이벤트 헨들러가 동작하지 않는다는문제가 생긴다
+const li = document.createElement('li');
+li.classList.add('item');
+li.textContent = '일기 쓰기';
+list.append(li);
