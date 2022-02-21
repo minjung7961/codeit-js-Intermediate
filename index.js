@@ -8,7 +8,7 @@ for(let item of list.children){
   });
 }
 
-// 만약 객체를 새로 만든다면 추가한 요소에 이벤트 헨들러가 동작하지 않는다는문제가 생긴다
+// 만약 객체를 새로 만든다면 추가한 요소에 이벤트 헨들러가 동작하지 않는다는문제가 생긴다. 동작하게 하려면 일일이 추가해줘야한다 이는 코드 가독성이나 유지보수하기 좋지 않다.
 const li = document.createElement('li');
 li.classList.add('item');
 li.textContent = '일기 쓰기';
