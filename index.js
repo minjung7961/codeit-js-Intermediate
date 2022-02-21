@@ -14,3 +14,9 @@ const li = document.createElement('li');
 li.classList.add('item');
 li.textContent = '일기 쓰기';
 list.append(li);
+
+// event Delegation 은 이벤트 버블링을 이용한 기법이기 때문에 자식 요소에 이벤트 버블링 중단하는 메소드를 쓰면 당연히 이벤트 위임이 제대로 작동하지 않는다
+li.addEventListener(li);
+li.addEventListener('click', function(e){
+  e.stopPropagation();
+});
