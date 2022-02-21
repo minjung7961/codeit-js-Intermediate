@@ -6,9 +6,6 @@ const items = document.querySelectorAll('.item'); // 클래스기준으로 선�
 
 content.addEventListener('click', function(e){
   console.log('content Event');
-  // 과연 이벤트 버블링 일어나는 부모 요소들까지 출력할까? 
-  // -> 아니다 해당 요소만 출력한다. 
-  // 덕분에 이벤트 핸들러 버블링 일어나는 최초의 위치를 알수있게 된다.
   console.log(e.currentTarget); 
 });
 
@@ -26,5 +23,7 @@ for(let item of items){
   item.addEventListener('click', function(e){
     console.log('item Event');
     console.log(e.currentTarget);
+    // 이벤트 버블링을 멈추는 방법
+    e.stopPropagation(); // 정말 필요한 경우가 아니라면 안쓰는것을 추천한다
   });
 }
