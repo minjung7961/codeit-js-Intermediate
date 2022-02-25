@@ -1,24 +1,9 @@
-// 브라우저의 기본 동작
-const link = document.querySelector('#link');
-const checkbox = document.querySelector('#checkbox');
-const input = document.querySelector('#input');
-const text = document.querySelector('#text');
+// class 로 태그 선택하기
 
-// 브라우저의 기본동작을 막는 방법은 어떤게 있을까?
+const myTags = document.getElementsByClassName('color-btn');
+console.log(myTags); // htmlCollection(8)
+console.log(myTags[0]); // 객체 하나 출력 태그그대로 나옴
 
-link.addEventListener('click',function(e){
-  e.preventDefault();
-  alert('지금은 이동할 수 없습니다.');
-});
-
-input.addEventListener('keydown', function(e){
-  if(!checkbox.checked){
-    e/preventDefault();
-    alert('체크박스를 먼저 클릭해 주세요.');
-  }
-});
-
-document.addEventListener('contextmenu', function(e){
-  e.preventDefault();
-  alert('마우스 오른쪽 클릭은 사용할 수 없습니다.');
-});
+for (let tag of myTags){
+  console.log(tag);
+}
